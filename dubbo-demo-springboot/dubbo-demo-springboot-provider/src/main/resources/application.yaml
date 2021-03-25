@@ -1,0 +1,20 @@
+# 服务
+server:
+  port: 8080
+#dubbo相关
+dubbo:
+  #  应用相关
+  application:
+    name: user-service-provider
+    logger: slf4j
+  #    注册中心
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  #    协议
+  protocol:
+    name: dubbo
+    port: 28080
+  monitor:
+    protocol: registry
+
